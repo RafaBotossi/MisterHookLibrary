@@ -1,0 +1,408 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MisterHookLibrary
+</name>
+</assembly>
+<members>
+<member name="T:MisterHookLibrary.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:MisterHookLibrary.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:MisterHookLibrary.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Interfaces.IKeyboardRecorder">
+ <summary>
+ Interface para Record de Keyboard, herda da interface-base IRecorder
+ Marcada como Friend para visibilidade somente interna, para uso do padrão de projeto Facade
+ Interface criada para uso de padrão de projeto Proxy
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Interfaces.IMouseRecorder">
+ <summary>
+ Interface para Record de Mouse, herda da interface-base IRecorder
+ Marcada como Friend para visibilidade somente interna, para uso do padrão de projeto Facade
+ Interface criada para uso de padrão de projeto Proxy
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Interfaces.IRecorder">
+ <summary>
+ Interface para Record de Keyboard e Mouse, serve como base para as outras interfaces
+ Marcada como Friend para visibilidade somente interna
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.ActionStructSingleton">
+ <summary>
+ Classe usada para retornar apenas um objeto ActionStructs, utilizando o padrão de projeto Singleton
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.ActionStructSingleton.#ctor">
+ <summary>
+ Construtor vazio pois o uso da função será Shared
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.ActionStructSingleton.ActionStructs">
+ <summary>
+ Retorna objeto Singleton
+ </summary>
+ <returns>Objeto Singleton</returns>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.enLogAction">
+ <summary>
+ Enum do tipo de Log criado
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.KeyboardHook">
+ <summary>
+ Modelo criado para também ter o Timestamp de quando foi pressionada a tecla
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.KeyboardRecorder">
+ <summary>
+ Classe criada para o record de Keyboard
+ Marcada como Friend para visibilidade somente interna, para uso do padrão de projeto Facade
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.KeyboardRecorder.#ctor(System.IntPtr,MisterHookLibrary.MisterHook.Models.PlaybackActions@)">
+ <summary>
+ Construtor da Classe de gravação de Teclado
+ </summary>
+ <param name="hinstance">É necessário passar o handle do programa que está realizando a gravação, senão não funciona.</param>
+ <param name="oPlayback">Se quiser realizar o playback depois, é necessário passar este objeto</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.KeyboardRecorder.StartRecording">
+ <summary>
+ Realiza a gravação de teclas
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.KeyboardRecorder.StopRecording">
+ <summary>
+ Pára a gravação
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.KeyboardRecorder.Finalize">
+ <summary>
+ Pára a gravação
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.KeyboardRecorder.HookKey(System.Int32,System.IntPtr,System.IntPtr)">
+ <summary>
+ Função que grava a tecla
+ </summary>
+ <param name="nCode">Ação</param>
+ <param name="wParam">Código da Tecla</param>
+ <param name="lParam">Estrutura de tecla pressionada</param>
+ <returns></returns>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.KeyboardRecorder.RaiseEvents(System.IntPtr,MisterHookLibrary.MisterHook.Structs.KeyboardHookStruct)">
+ <summary>
+ Chama eventos para log
+ </summary>
+ <param name="wParam">Tecla Pressionada</param>
+ <param name="KeyboardStruct">Estrutura de Tecla para passar pros eventos</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.KeyboardRecorder.LogAction(MisterHookLibrary.MisterHook.Models.KeyboardHook)">
+ <summary>
+ Realiza Log da ação para o Playback
+ </summary>
+ <param name="KeyboardHookModel">Classe da ação realizada</param>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.Log">
+ <summary>
+ Classe para log de eventos
+ </summary>
+</member>
+<member name="P:MisterHookLibrary.MisterHook.Models.Log.Log">
+ <summary>
+ Propriedade para ativar o log ou não quando houver ação de Log
+ </summary>
+ <returns></returns>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.Log.LogAction(MisterHookLibrary.MisterHook.Models.enLogAction,System.String)">
+ <summary>
+ Ação de Log do evento
+ </summary>
+ <param name="Type">Tipo de log a ser criado</param>
+ <param name="msg">Mensagem para ser logada</param>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.MouseHook">
+ <summary>
+ Modelo criado para também ter o Timestamp de quando houver ação de mouse
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.MouseRecorder">
+ <summary>
+ Classe criada para o record de Mouse
+ Marcada como Friend para visibilidade somente interna, para uso do padrão de projeto Facade
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.MouseRecorder.#ctor(System.IntPtr,MisterHookLibrary.MisterHook.Models.PlaybackActions@)">
+ <summary>
+ Construtor da Classe de gravação de Teclado
+ </summary>
+ <param name="hinstance">É necessário passar o handle do programa que está realizando a gravação, senão não funciona.</param>
+ <param name="oPlayback">Se quiser realizar o playback depois, é necessário passar este objeto</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.MouseRecorder.StartRecording">
+ <summary>
+ Realiza a Gravação de Mouse
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.MouseRecorder.StopRecording">
+ <summary>
+ Pára a gravação
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.MouseRecorder.Finalize">
+ <summary>
+ Pára a gravação
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.MouseRecorder.HookMouse(System.Int32,System.IntPtr,System.IntPtr)">
+ <summary>
+ Função que grava a ação do Mouse
+ </summary>
+ <param name="nCode">Ação</param>
+ <param name="wParam">Código da ação do mouse</param>
+ <param name="lParam">Estrutura da ação do mouse</param>
+ <returns></returns>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.MouseRecorder.RaiseEvents(System.IntPtr)">
+ <summary>
+ Chama eventos para Log
+ </summary>
+ <param name="wParam">Ação do Mouse</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.MouseRecorder.LogAction(MisterHookLibrary.MisterHook.Models.MouseHook)">
+ <summary>
+ Realiza Log da ação para o Playback
+ </summary>
+ <param name="MouseHookModel">Classe da ação realizada</param>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.PlaybackActions">
+ <summary>
+ Classe usada para realizar playback da gravação realizada
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.#ctor(System.IntPtr,System.String,System.String)">
+ <summary>
+ Construtor da classe de Playback
+ </summary>
+ <param name="hinstance">É necessário passar o handle da aplicação que chamou a gravação/playback, se não o hook não funciona</param>
+ <param name="PathToSave">Qual o caminho do script para rodar o playback</param>
+ <param name="FileName">Qual o nome do arquivo do script para rodar o playback</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.Playback(System.String)">
+ <summary>
+ Realiza o Playback gravado anteriormente
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.StopPlayback">
+ <summary>
+ Pára o playback
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.Sleep(System.Object,System.DateTime@)">
+ <summary>
+ Entre as ações é necessário esperar o tempo que o usuário esperou para realizar a ação. Utiliza os timestamps para isso
+ </summary>
+ <param name="oStruct">Estrutura</param>
+ <param name="lastTimestamp">Último Timestamp para cálculo do tempo entre ações</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.LogAction(System.Object)">
+ <summary>
+ Realiza o Log da ação nos objetos de gravação de Teclado e Mouse
+ </summary>
+ <param name="KeyStruct">Pode ser KeyboardHookModel ou MouseHookModel</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.SaveRecordToFile(System.String,System.String)">
+ <summary>
+ Salva o que foi gravado em arquivo
+ </summary>
+ <param name="PathToSave">Caminho para salvar o arquivo de script</param>
+ <param name="Filename">Nome do arquivo de script para salvar</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.KeyboardRecorder_KeyDown(System.Windows.Forms.Keys)">
+ <summary>
+ Checa se o usuário apertou a tecla Pause para parar o Playback
+ </summary>
+ <param name="Key">Tecla Pressionada</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.KeyboardPlayback(System.Object@)">
+ <summary>
+ Realiza o Playback do Teclado
+ </summary>
+ <param name="oStruct">Estrutura do tipo KeyboardHookModel</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackActions.MousePlayback(System.Object@)">
+ <summary>
+ Realiza o Playback do Mouse
+ </summary>
+ <param name="oStruct">Estrutura do tipo MouseHookModel</param>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.PlaybackSingleton">
+ <summary>
+ Classe usada para retornar apenas um objeto Playback, utilização do padrão de projeto Singleton
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackSingleton.#ctor">
+ <summary>
+ Construtor vazio pois o uso da função será Shared
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.PlaybackSingleton.Instance(System.IntPtr,System.String,System.String)">
+ <summary>
+ Retorna objeto Singleton
+ </summary>
+ <param name="hinstance">Instância do sistema que chamou a library</param>
+ <param name="PathToSave">Caminho para salvar o Playback</param>
+ <param name="FileName">Nome do arquivo para salvar o Playback</param>
+ <returns>Objeto Singleton</returns>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Models.Recorder">
+ <summary>
+ Classe criada para encapsular os tipos diferentes de gravação
+ Usa o padrão de projeto Facade
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.Recorder.#ctor(System.IntPtr,MisterHookLibrary.MisterHook.Models.PlaybackActions@,System.Boolean)">
+ <summary>
+ Construtor da Classe de gravação de Teclado e Mouse
+ </summary>
+ <param name="hinstance"></param>
+ <param name="oPlayback"></param>
+ <param name="LogAux"></param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.Recorder.StartRecording">
+ <summary>
+ Realiza a gravação de teclas e ações do Mouse
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Models.Recorder.StopRecording">
+ <summary>
+ Pára a gravação
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Proxies.KeyboardRecorderProxy">
+ <summary>
+ Classe criada para o record de ações de Keyboard usando o padrão de projetos Proxy, para separar a camada de criação de log
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.KeyboardRecorderProxy.#ctor(System.IntPtr,MisterHookLibrary.MisterHook.Models.PlaybackActions@)">
+ <summary>
+ Construtor da Classe de gravação de Teclado
+ </summary>
+ <param name="hinstance">É necessário passar o handle do programa que está realizando a gravação, senão não funciona.</param>
+ <param name="oPlayback">Se quiser realizar o playback depois, é necessário passar este objeto</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.KeyboardRecorderProxy.StartRecording">
+ <summary>
+ Realiza a gravação de teclas
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.KeyboardRecorderProxy.StopRecording">
+ <summary>
+ Pára a gravação
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.KeyboardRecorderProxy.KeyboardRecorder_KeyDown(System.Windows.Forms.Keys)">
+ <summary>
+ Evento para indicar a ação de pressionar uma tecla
+ </summary>
+ <param name="Key">Tecla</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.KeyboardRecorderProxy.KeyboardRecorder_KeyUp(System.Windows.Forms.Keys)">
+ <summary>
+ Evento para indicar a ação de soltar a tecla pressionada
+ </summary>
+ <param name="Key">Tecla</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.KeyboardRecorderProxy.LogAction(MisterHookLibrary.MisterHook.Models.enLogAction,System.String)">
+ <summary>
+ Log da ação
+ </summary>
+ <param name="logType">Tipo de Log</param>
+ <param name="msg">Mensagem</param>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy">
+ <summary>
+ Classe criada para o record de ações de Mouse usando o padrão de projetos Proxy, para separar a camada de criação de log
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy.#ctor(System.IntPtr,MisterHookLibrary.MisterHook.Models.PlaybackActions@)">
+ <summary>
+ Construtor da Classe de gravação de Teclado
+ </summary>
+ <param name="hinstance">É necessário passar o handle do programa que está realizando a gravação, senão não funciona.</param>
+ <param name="oPlayback">Se quiser realizar o playback depois, é necessário passar este objeto</param>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy.StartRecording">
+ <summary>
+ Realiza a gravação de teclas
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy.StopRecording">
+ <summary>
+ Pára a gravação
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy._MouseRecorder_MouseLDown">
+ <summary>
+ Evento para indicar a ação de pressionar o botão esquerdo do mouse
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy._MouseRecorder_MouseLUp">
+ <summary>
+ Evento para indicar a ação de soltar o botão esquerdo do mouse
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy._MouseRecorder_MouseRDown">
+ <summary>
+ Evento para indicar a ação de pressionar o botão direito do mouse
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy._MouseRecorder_MouseRUp">
+ <summary>
+ Evento para indicar a ação de soltar o botão direito do mouse
+ </summary>
+</member>
+<member name="M:MisterHookLibrary.MisterHook.Proxies.MouseRecorderProxy.LogAction(MisterHookLibrary.MisterHook.Models.enLogAction,System.String)">
+ <summary>
+ Log da ação
+ </summary>
+ <param name="logType">Tipo de Log</param>
+ <param name="msg">Mensagem</param>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Structs.KeyboardHookFlagsStruct">
+ <summary>
+ Flags da estrutura de Keyboard
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Structs.KeyboardHookStruct">
+ <summary>
+ Estrutura do hook de keyboard
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Structs.MouseHookPointStruct">
+ <summary>
+ Estrutura de ponto para uso na estrutura de hook de mouse
+ </summary>
+</member>
+<member name="T:MisterHookLibrary.MisterHook.Structs.MouseHookStruct">
+ <summary>
+ Estrutura do hook de mouse
+ </summary>
+</member>
+</members>
+</doc>

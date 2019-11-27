@@ -1,0 +1,18 @@
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.vbprojAssemblyReference.cache
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.Resources.resources
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.vbproj.GenerateResource.cache
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\bin\Debug\MisterHookLibrary.dll
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\bin\Debug\MisterHookLibrary.pdb
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\bin\Debug\MisterHookLibrary.xml
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.dll
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.xml
+C:\Users\UNE-DEV01\Source\Repos\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.pdb
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.vbprojAssemblyReference.cache
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.Resources.resources
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.vbproj.GenerateResource.cache
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.dll
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.xml
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\obj\Debug\MisterHookLibrary.pdb
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\bin\Debug\MisterHookLibrary.dll
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\bin\Debug\MisterHookLibrary.pdb
+C:\Users\UNE-DEV01\Source\Repos\Nova pasta\MisterHookLibrary\MisterHookLibrary\bin\Debug\MisterHookLibrary.xml
